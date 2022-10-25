@@ -6,8 +6,8 @@
   "scripts": {
     "build": "truffle compile",
     "test": "truffle test ./test/compcoin.test.js",
-    "deploy": "truffle migrate --network rinkeby",
-    "deploy:clear": "truffle migrate --network rinkeby --reset"
+    "deploy": "truffle migrate --network goerli",
+    "deploy:clear": "truffle migrate --network goerli --reset"
   },
   "keywords": [
     "truffle",

@@ -2,7 +2,7 @@
 
 A sample project for DApp development and management using [truffle](https://trufflesuite.com/).
 
-Designed for COMP5521, Department of Computing, PolyU.
+Designed for COMP4142, Department of Computing, PolyU.
 
 ## Preface
 
@@ -55,10 +55,10 @@ dotenv:                       ^16.0.0
   $ npx truffle compile
   ```
 
-- Migerate (deploy) contracts to Rinkeby network:
+- Migerate (deploy) contracts to Goerli network:
 
   ```shell
-  $ npx truffle migrate --network rinkeby
+  $ npx truffle migrate --network goerli
   ```
 
 ## License

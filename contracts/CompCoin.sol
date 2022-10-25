@@ -14,7 +14,7 @@ contract CompCoin is ERC721Enumerable {
   string private constant coinSymbol = "COMP";
 
   constructor() ERC721(coinName, coinSymbol) {
-    // provide an initial supply to the creator, with a tokenId of 5521
-    _safeMint(msg.sender, 5521);
+    // provide an initial supply to the creator, with a tokenId of 4142
+    _safeMint(msg.sender, 4142);
   }
 }
