@@ -11,54 +11,54 @@ This project demonstrates how to develop and manage decentralized applications u
 ## Dependency
 
 ```
-@truffle/hdwallet-provider:   ^2.0.3
-@openzeppelin/contracts:      ^4.5.0
-truffle:                      ^5.5.3
-dotenv:                       ^16.0.0
+truffle:                      ^5.11.5
+dotenv:                       ^16.3.1
+@openzeppelin/contracts:      ^5.0.0
+@truffle/hdwallet-provider:   ^2.1.15
 ```
 
-## Installation
+## Deployment
 
-- Node and npm needed.
-
-- Download this repository to your own device:
+- Run the image to initiate a container:
 
   ```shell
-  $ git clone git@github.com:wurahara/Lab5-truffle.git
-  $ cd Lab5-web3
+  $ docker run -d --rm --name truffle \
+      -it crumblejon/smart-contract-truffle
   ```
 
-- Configure your infrua node and private key by modifying `env/.secret`:
+  This will pull the image `crumblejon/smart-contract-truffle` from Docker Hub and run it in Docker.
+
+- Configure your API key and private key by:
 
   ```
-  PROJECT_ID=<your_project_id_here>
-  PRIVATE_KEY=<your_private_key_here>
+  $ docker exec truffle \
+      npm run secret \
+      <your_API_key> <your_private_key>
   ```
 
-- Install the dependencies:
+  You can get an API key from [Infura](https://infura.io/), and find your private key from the MetaMask extension.
+
+## Execution
+
+- Test the smart contract and deployment scripts:
 
   ```shell
-  $ npm i
-  ```
-
-## Compilation and Deployment
-
-- Test the smart contracts and deployment scripts:
-
-  ```shell
-  $ npx truffle test ./test/compcoin.test.js
+  $ docker exec truffle \
+      npm run test
   ```
 
 - Compile the smart contracts:
 
   ```shell
-  $ npx truffle compile
+  $ docker exec truffle \
+      npm run build
   ```
 
 - Migerate (deploy) contracts to Sepolia network:
 
   ```shell
-  $ npx truffle migrate --network sepolia
+  $ docker exec truffle \
+      npm run deploy
   ```
 
 ## License
