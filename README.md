@@ -55,10 +55,10 @@ dotenv:                       ^16.0.0
   $ npx truffle compile
   ```
 
-- Migerate (deploy) contracts to Goerli network:
+- Migerate (deploy) contracts to Sepolia network:
 
   ```shell
-  $ npx truffle migrate --network goerli
+  $ npx truffle migrate --network sepolia
   ```
 
 ## License
