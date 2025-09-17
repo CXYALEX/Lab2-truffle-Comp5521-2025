@@ -1,8 +1,8 @@
-# Lab5-truffle
+# Lab2-truffle-Comp5521-2025
 
 A sample project for DApp development and management using [truffle](https://trufflesuite.com/).
 
-Designed for COMP4142, Department of Computing, PolyU.
+Designed for COMP5521, Department of Computing, PolyU.
 
 ## Preface
 
